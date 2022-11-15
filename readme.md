@@ -1,5 +1,13 @@
 ## Model Deployment using BentoML & AWS Fargate
 
+<p style="text-align:center">
+<img src="https://miro.medium.com/max/640/1*BCgeXMygZAH_xXzKG8vvQQ.png" width="200" > 
+<img src="https://raw.githubusercontent.com/bentoml/BentoML/main/docs/source/_static/img/bentoml-readme-header.jpeg" width="400">
+</p>
+<br>
+
+---
+
 This example shows how to deploy a machine learning model to AWS Fargate using BentoML. The example uses the [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset) dataset to train a scikit-learn model, and uses BentoML to package the model as a REST API server. The REST API server is then deployed to AWS Fargate using BentoML's CLI tool.
 
 [Train](codes/train_model.py) code comes from [this example](https://github.com/silverstone1903/mlops/blob/master/CML/train_model.py). For the simplictity, model only uses the 8 selected columns for training and prediction. I didn't want to make the example too complicated and keep the focus on the deployment part.
@@ -110,6 +118,9 @@ result = requests.post(url, json=data).json()
 pp.pprint(result)
 # {'Attrition': 'Yes'}
 ```
+
+
+---
 
 ### Resources
 1. [BentoML](https://docs.bentoml.org/en/latest/concepts/model.html)
